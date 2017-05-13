@@ -1,4 +1,45 @@
 /*id takes priority when conflicting changes occur*/
 
 body {background: lightblue;padding:10px;}
-.info{background: pink; width: 600px;}
+.info{
+  background: pink;
+  width: 400px;
+}
+
+.gameButtons{
+  background-color: darkgreen;
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  color: lightyellow;
+}
+
+#switchButton{
+  width: 120px;
+  height: 40px;
+  font-size: 30px;
+}
+
+#movesCounter{
+  width: 250px;
+  height: 40px;
+  font-size: 30px;
+  background-color: yellow;
+
+  position: absolute;
+  top: 15px;
+  left: 650px;
+}
+
+#gameZone{
+  position:absolute;
+  left:300px;
+  top: 90px;
+}
+
+#selectionZone{
+  background-color: lightgrey;
+  position: absolute;
+  top: 130px;
+  left: 50px;
+}

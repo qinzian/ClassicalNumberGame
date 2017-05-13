@@ -8,11 +8,14 @@ var hIndices = range(height);
 var blocks = []; // repr a width by height box
 var block0index = 0;
 
+
 for (var i = 0; i < width*height; i++) {
 	blocks.push(new block(i));
 	blocks[i].setLoc([parseInt(i/width),i%width]);
 	$('#button'+i.toString()).html(blocks[i].getV().toString());
 }
+
+
 function switchAdjBlocks(s1,s2){
 	var b1 = blocks[s1];
 	var b2 = blocks[s2];
@@ -34,9 +37,15 @@ function switchAdjBlocks(s1,s2){
 		}
 		$('#debug').html('block0index: '+block0index.toString());
 	} else { // aren't adjacent
-		$('#output').html(strf('invalid switch b/w buttons {}&{}; they must be adj',[s1,s2]));
+		$('#instr').html('please only switch adjacent blocks');
+		$('#debug').html(strf('invalid switch b/w BUTTONS {}&{}; they\'re not adj',[s1,s2]));
 	}
 	refreshSelect();
+
+	if (gaming){
+		updateMoves();
+		select(block0index);
+	}
 }
 
 $('#debug').html('done loading blockscript.js');

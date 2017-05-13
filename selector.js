@@ -1,10 +1,15 @@
 $('#debug').html('started loading selector.js');
 
+var gaming = false;
 var select1 = -1;
 var select2 = -1;
 var firstSelect = true;
 
 function select(item){
+	if (gaming){
+		firstSelect = blocks[item].getV() == 0;
+	}
+
 	if (firstSelect){
 		select1 = item;
 		$('#select1').html("block"+blocks[item].getV().toString());
@@ -19,8 +24,8 @@ function select(item){
 }
 
 function refreshSelect(){
-	$('#select1').html('');
-	$('#select2').html('');
+	$('#select1').html('block');
+	$('#select2').html('block');
 	select1 = -1;
 	select2 = -1;
 	firstSelect = true;

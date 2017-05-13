@@ -2,56 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Title goes here</title>
+    <title>Classical Number Game</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div>
-      <p id = 'poss'>press randomize to begin</p>
+    <div = 'miscZone'>
+      <p id = 'instr'>Press "Randomize" to begin</p>
+      <p id = 'movesCounter'>Total Moves: 0</p>
       <button onclick = 'randomize()'>Randomize</button>
-
-      <br>
-      <br>
-      <button onclick = 'b0()' id='button0'></button>  </h1>
-      <button onclick = 'b1()' id='button1'></button>  </h1>
-      <button onclick = 'b2()' id='button2'></button>  </h1>
-
-      <br>
-      <button onclick = 'b3()' id='button3'></button>  </h1>
-      <button onclick = 'b4()' id='button4'></button>  </h1>
-      <button onclick = 'b5()' id='button5'></button>  </h1>
-
-      <br>
-      <button onclick = 'b6()' id='button6'></button>  </h1>
-      <button onclick = 'b7()' id='button7'></button>  </h1>
-      <button onclick = 'b8()' id='button8'></button>  </h1>
-
-      <br>
-      <br>
-      <button onclick = 'switchButton()'>switch</button>
-      <br>
-
-      <p id = 'output' class = 'info'>output msg</p>
-
-      1.selected:<p id = 'select1'></p>
-      <br>
-      2.selected:<p id = 'select2'></p>
-      <br>
-
-
-      <button onclick = 'toggleDebugP()'>Debug On/Off</button>
-      <p id ='debug' class = 'info' visible = false>debug info</p>
     </div>
 
+    <div id = 'gameZone'>
+      <br>
+      <button onclick = 'b0()' id='button0' class = 'gameButtons'></button>
+      <button onclick = 'b1()' id='button1' class = 'gameButtons'></button>
+      <button onclick = 'b2()' id='button2' class = 'gameButtons'></button>
+
+      <br>
+
+      <button onclick = 'b3()' id='button3' class = 'gameButtons'></button>
+      <button onclick = 'b4()' id='button4' class = 'gameButtons'></button>
+      <button onclick = 'b5()' id='button5' class = 'gameButtons'></button>
+      <button onclick = 'switchButton()' id = 'switchButton'>switch</button>
+
+      <br>
+
+      <button onclick = 'b6()' id='button6' class = 'gameButtons'></button>
+      <button onclick = 'b7()' id='button7' class = 'gameButtons'></button>
+      <button onclick = 'b8()' id='button8' class = 'gameButtons'></button>
+    </div>
+
+    <div = 'selectionZone'>
+      <br>
+      1.selected:<p id = 'select1'>block</p>
+      <br>
+      2.selected:<p id = 'select2'>block</p>
+      <br>
+    </div>
+
+    <button onclick = 'toggleDebugP()'>Debug On/Off</button>
+    <p id ='debug' class = 'info' visible = false>debug info</p>
+
+    <!--script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src='helper.js'> </script>
     <script src='block.js'> </script>
     <script src='selector.js'> </script>
+    <script src= 'moves.js'></script>
     <script src='blockscript.js'></script>
     <script src='script.js'></script>
     <script src='generator.js'></script>
-
-
-
   </body>
 </html>

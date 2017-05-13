@@ -37,6 +37,7 @@ function b0(){ //clicked button
 	select(0);
 }
 
+$('#debug').hide();
 function toggleDebugP(){
 	$('#debug').toggle();
 }
@@ -51,5 +52,19 @@ function switchButton(){
 	} else {
 		switchAdjBlocks(select1,select2);
 	}
+	if (gaming && checkWinCondition()){
+		$('#instr').html('You did it!! Let\'s play again!');
+		gaming = false;
+	}
 }
+
+function checkWinCondition(){
+	for (var i = 0; i < blocks.length; i++) {
+		if(blocks[i].getV() !== i){
+			return false;
+		}
+	}
+	return true;
+}
+
 $('#debug').html('done loading script.js');

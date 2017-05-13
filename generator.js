@@ -4,14 +4,16 @@ var possLoc = [];
 
 function randomize(){
   $('#debug').html('clicked random button');
-
   var adjIndex;
-  for (var i = 0; i <          50       ; i++) {
+  for (var i = 0; i <          1       ; i++) {
     updateBlock0adj();
     adjIndex = Math.floor((Math.random()*block0adj.length)); // random block in block0adj[]
 
     switchAdjBlocks(block0index,block0adj[adjIndex]);
   }
+
+  randomizeInit();
+
   $('#debug').html(block0.getLoc().toString());
 }
 
@@ -39,5 +41,13 @@ function updateBlock0adj(){
     }
   }
   //$('#debug').html(block0adj.toString());
+}
+
+function randomizeInit(){
+  gaming = true;
+  refreshSelect();
+  select(block0index);
+  $('#instr').html('put everything back to the original order by switching with block#0');
+  resetMoves();
 }
 $('#debug').html('done loading generator.js');
