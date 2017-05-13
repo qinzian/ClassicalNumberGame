@@ -56,6 +56,7 @@ function switchButton(){
 	}
 	if (gaming && checkWinCondition()){
 		$('#instr').html('You did it!! Let\'s play again!');
+		updateBestMove(moves);
 		gaming = false;
 	}
 }
