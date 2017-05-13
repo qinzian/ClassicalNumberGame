@@ -16,7 +16,7 @@ body {background: lightblue;padding:10px;}
 
 #inputZone{
   position : relative;
-  left : 10px;
+  left : -50px;
   top: 20px;
 }
 

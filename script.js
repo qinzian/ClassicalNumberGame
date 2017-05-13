@@ -38,9 +38,17 @@ function b0(){ //clicked button
 }
 
 $('#debug').hide();
+$('#mousePos').hide();
 function toggleDebugP(){
 	$('#debug').toggle();
+	$('#mousePos').toggle();
 }
+
+$(function() {//keeps track of where the mouse is
+    $('#inputZone').mousemove(function(e) {
+        $('#mousePos').html('x:'+event.offsetX+'<br>y:'+event.offsetY);
+    });
+});
 
 function switchButton(){
 	$('#debug').html('clicked switch button');
