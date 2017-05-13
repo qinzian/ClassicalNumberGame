@@ -1,0 +1,4 @@
+/*id takes priority when conflicting changes occur*/
+
+body {background: lightblue;padding:10px;}
+.info{background: pink; width: 600px;}
