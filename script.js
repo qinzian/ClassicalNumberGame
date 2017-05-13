@@ -44,11 +44,7 @@ function toggleDebugP(){
 	$('#mousePos').toggle();
 }
 
-$(function() {//keeps track of where the mouse is
-    $('#inputZone').mousemove(function(e) {
-        $('#mousePos').html('x:'+event.offsetX+'<br>y:'+event.offsetY);
-    });
-});
+
 
 function switchButton(){
 	$('#debug').html('clicked switch button');

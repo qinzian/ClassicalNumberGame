@@ -5,7 +5,7 @@ var possLoc = [];
 function randomize(){
   $('#debug').html('clicked random button');
   var adjIndex;
-  for (var i = 0; i <          1       ; i++) {
+  for (var i = 0; i <          10       ; i++) {
     updateBlock0adj();
     adjIndex = Math.floor((Math.random()*block0adj.length)); // random block in block0adj[]
 

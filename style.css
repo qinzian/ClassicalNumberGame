@@ -3,7 +3,7 @@
 body {background: lightblue;padding:10px;}
 .info{
   background: pink;
-  width: 400px;
+  width: 220px;
 }
 
 .gameButtons{
@@ -14,10 +14,13 @@ body {background: lightblue;padding:10px;}
   color: lightyellow;
 }
 
-#inputZone{
+#guiZone{
   position : relative;
-  left : -50px;
-  top: 20px;
+  left : -70px;
+  top: -80px;
+
+  height: 550px;
+  width: 850px;
 }
 
 #switchButton{
@@ -29,11 +32,14 @@ body {background: lightblue;padding:10px;}
   font-size: 30px;
 }
 
-#movesCounter{
+#bestMovesCounter{
   position: relative;
-  top: -85px;
-  left: -580px;
 
+  left: 100px;
+  top:  80px;
+}
+
+.counter{
   width: 250px;
   height: 40px;
   font-size: 30px;
@@ -44,23 +50,42 @@ body {background: lightblue;padding:10px;}
   position: relative;
   left:650px;
   top: 20px;
+  width: 350px;
+
+
+  border: 2px solid;
+  padding: 5px;
 }
 
 #gameZone{
   position: relative;
   left:300px;
   top: -80px;
+  width: 500px;
+
+  border: 2px solid;
+  padding: 5px;
 }
 
 #selectionZone{
   font-size: 20px;
+
   position: relative;
   top: -370px;
   left: 100px;
+  width: 180px;
+
+  border: 2px solid;
+  padding: 5px;
 }
 
 #debugZone{
-  position: absolute;
-  top: 390px;
-  left: 70px;
+  position: relative;
+  top: -360px;
+  left: 100px;
+
+  width: 300px;
+
+  border: 2px solid;
+  padding: 5px;
 }
