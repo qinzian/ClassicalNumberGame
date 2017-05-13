@@ -15,20 +15,28 @@ body {background: lightblue;padding:10px;}
 }
 
 #switchButton{
+  position : relative;
+  left : 40px;
   width: 120px;
   height: 40px;
   font-size: 30px;
 }
 
 #movesCounter{
+  position: relative;
+  top: -85px;
+  left: 600px;
+
   width: 250px;
   height: 40px;
   font-size: 30px;
   background-color: yellow;
+}
 
-  position: absolute;
-  top: 15px;
-  left: 650px;
+#miscZone{
+  position:absolute;
+  left:70px;
+  top: 20px;
 }
 
 #gameZone{
@@ -38,8 +46,14 @@ body {background: lightblue;padding:10px;}
 }
 
 #selectionZone{
-  background-color: lightgrey;
+  font-size: 20px;
   position: absolute;
   top: 130px;
-  left: 50px;
+  left: 70px;
+}
+
+#debugZone{
+  position: absolute;
+  top: 390px;
+  left: 70px;
 }

@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div = 'miscZone'>
+    <div id = 'miscZone'>
       <p id = 'instr'>Press "Randomize" to begin</p>
-      <p id = 'movesCounter'>Total Moves: 0</p>
       <button onclick = 'randomize()'>Randomize</button>
+      <p id = 'movesCounter'>Total Moves: 0</p>
     </div>
 
     <div id = 'gameZone'>
@@ -32,7 +32,7 @@
       <button onclick = 'b8()' id='button8' class = 'gameButtons'></button>
     </div>
 
-    <div = 'selectionZone'>
+    <div id = 'selectionZone'>
       <br>
       1.selected:<p id = 'select1'>block</p>
       <br>
@@ -40,8 +40,10 @@
       <br>
     </div>
 
-    <button onclick = 'toggleDebugP()'>Debug On/Off</button>
-    <p id ='debug' class = 'info' visible = false>debug info</p>
+    <div id = 'debugZone'>
+      <button onclick = 'toggleDebugP()'>Debug On/Off</button>
+      <p id ='debug' class = 'info' visible = false>debug info</p>
+    </div>
 
     <!--script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
