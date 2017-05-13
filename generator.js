@@ -1,4 +1,4 @@
-//$('#debug').html('started loading generator.js');
+$('#debug').html('started loading generator.js');
 var block0adj = [];
 var possLoc = [];
 
@@ -40,4 +40,4 @@ function updateBlock0adj(){
   }
   //$('#debug').html(block0adj.toString());
 }
-//$('#debug').html('done loading generator.js');
+$('#debug').html('done loading generator.js');

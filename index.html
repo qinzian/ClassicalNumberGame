@@ -7,8 +7,6 @@
   </head>
   <body>
     <div>
-      <button onclick = 'showDebug()'>showDebug</button>
-      <p id ='debug' class = 'info' visible = false>debug info</p>
       <p id = 'poss'>press randomize to begin</p>
       <button onclick = 'randomize()'>Randomize</button>
 
@@ -38,6 +36,11 @@
       1.selected:<p id = 'select1'></p>
       <br>
       2.selected:<p id = 'select2'></p>
+      <br>
+
+
+      <button onclick = 'toggleDebugP()'>Debug On/Off</button>
+      <p id ='debug' class = 'info' visible = false>debug info</p>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

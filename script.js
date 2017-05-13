@@ -37,6 +37,10 @@ function b0(){ //clicked button
 	select(0);
 }
 
+function toggleDebugP(){
+	$('#debug').toggle();
+}
+
 function switchButton(){
 	$('#debug').html('clicked switch button');
 
