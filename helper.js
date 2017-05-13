@@ -18,7 +18,7 @@ function range(p1,p2){
 }
 
 $(function() {//keeps track of where the mouse is
-    $('#inputZone').mousemove(function(e) {
+    $('#guiZone').mousemove(function(e) {
         $('#mousePos').html('x:'+event.offsetX+'<br>y:'+event.offsetY);
     });
 });

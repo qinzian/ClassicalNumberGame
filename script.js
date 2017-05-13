@@ -44,8 +44,6 @@ function toggleDebugP(){
 	$('#mousePos').toggle();
 }
 
-
-
 function switchButton(){
 	$('#debug').html('clicked switch button');
 
