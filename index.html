@@ -6,43 +6,45 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id = 'miscZone'>
-      <p id = 'instr'>Press "Randomize" to begin</p>
-      <button onclick = 'randomize()'>Randomize</button>
-      <p id = 'movesCounter'>Total Moves: 0</p>
-    </div>
+    <div id = 'inputZone'>
+      <div id = 'miscZone'>
+        <p id = 'instr'>Press "Randomize" to begin</p>
+        <button onclick = 'randomize()'>Randomize</button>
+        <p id = 'movesCounter'>Total Moves: 0</p>
+      </div>
 
-    <div id = 'gameZone'>
-      <br>
-      <button onclick = 'b0()' id='button0' class = 'gameButtons'></button>
-      <button onclick = 'b1()' id='button1' class = 'gameButtons'></button>
-      <button onclick = 'b2()' id='button2' class = 'gameButtons'></button>
+      <div id = 'gameZone'>
+        <br>
+        <button onclick = 'b0()' id='button0' class = 'gameButtons'></button>
+        <button onclick = 'b1()' id='button1' class = 'gameButtons'></button>
+        <button onclick = 'b2()' id='button2' class = 'gameButtons'></button>
 
-      <br>
+        <br>
 
-      <button onclick = 'b3()' id='button3' class = 'gameButtons'></button>
-      <button onclick = 'b4()' id='button4' class = 'gameButtons'></button>
-      <button onclick = 'b5()' id='button5' class = 'gameButtons'></button>
-      <button onclick = 'switchButton()' id = 'switchButton'>switch</button>
+        <button onclick = 'b3()' id='button3' class = 'gameButtons'></button>
+        <button onclick = 'b4()' id='button4' class = 'gameButtons'></button>
+        <button onclick = 'b5()' id='button5' class = 'gameButtons'></button>
+        <button onclick = 'switchButton()' id = 'switchButton'>switch</button>
 
-      <br>
+        <br>
 
-      <button onclick = 'b6()' id='button6' class = 'gameButtons'></button>
-      <button onclick = 'b7()' id='button7' class = 'gameButtons'></button>
-      <button onclick = 'b8()' id='button8' class = 'gameButtons'></button>
-    </div>
+        <button onclick = 'b6()' id='button6' class = 'gameButtons'></button>
+        <button onclick = 'b7()' id='button7' class = 'gameButtons'></button>
+        <button onclick = 'b8()' id='button8' class = 'gameButtons'></button>
+      </div>
 
-    <div id = 'selectionZone'>
-      <br>
-      1.selected:<p id = 'select1'>block</p>
-      <br>
-      2.selected:<p id = 'select2'>block</p>
-      <br>
-    </div>
+      <div id = 'selectionZone'>
+        <br>
+        1.selected:<p id = 'select1'>block</p>
+        <br>
+        2.selected:<p id = 'select2'>block</p>
+        <br>
+      </div>
 
-    <div id = 'debugZone'>
-      <button onclick = 'toggleDebugP()'>Debug On/Off</button>
-      <p id ='debug' class = 'info' visible = false>debug info</p>
+      <div id = 'debugZone'>
+        <button onclick = 'toggleDebugP()'>Debug On/Off</button>
+        <p id ='debug' class = 'info' visible = false>debug info</p>
+      </div>
     </div>
 
     <!--script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><!-->
