@@ -32,7 +32,6 @@ function switchAdjBlocks(s){
 
 		block0index = s;
 		$('#debug').html('block0index is now:'+block0index.toString());
-		$('#instr').html('~~~');
 
 	} else { // aren't adjacent
 		$('#instr').html('please only switch adjacent blocks');

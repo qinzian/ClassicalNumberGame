@@ -14,12 +14,12 @@ body {background: lightblue;padding:10px;}
   color: lightyellow;
 }
 
-.zone{  border: 2px solid;  padding: 5px;}
+.zone{border: 2px solid;  padding: 5px;}
 
 #inputZone{
   position : absolute;
   height: 550px;
-  width: 850px;
+  width: 550px;
 }
 
 #outputZone{
@@ -54,15 +54,16 @@ body {background: lightblue;padding:10px;}
 
 #gameZone{
   position: relative;
-  left:300px;
-  top: -80px;
+  left:80px;
+  top: 80px;
+
   width: 500px;
 }
 
 #debugZone{
   position: relative;
-  top: -360px;
-  left: 100px;
+  top: 80px;
+  left: 50px;
 
   width: 300px;
 }
