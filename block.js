@@ -2,16 +2,13 @@ $('#debug').html('started loading block.js');
 
 function block(n){
   this.loc = [-1,-1];
-  this.v = n;
+  this.v = n==0?".":n.toString();
 
   this.setV = function(n){
     this.v = n;
   }
   this.getV = function(){
     return this.v;
-  }
-  this.getLabel = function(){
-    return this.v;// == 0? '':this.v;
   }
   this.setLoc = function(u){
     this.loc = u;

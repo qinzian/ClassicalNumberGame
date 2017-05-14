@@ -14,7 +14,7 @@ var select1 = -1;
 for (var i = 0; i < width*height; i++) {
 	blocks.push(new block(i));
 	blocks[i].setLoc([parseInt(i/width),i%width]);
-	$('#button'+i.toString()).html(blocks[i].getLabel().toString());
+	$('#button'+i.toString()).html(blocks[i].getV().toString());
 }
 
 
@@ -29,8 +29,8 @@ function switchAdjBlocks(s){
 		b2.setV(tmpB1);
 
 		// switch labels on the buttons
-		$('#button'+s.toString()).html(b1.getLabel().toString());
-		$('#button'+block0index.toString()).html(b2.getLabel().toString());
+		$('#button'+s.toString()).html(b1.getV().toString());
+		$('#button'+block0index.toString()).html(b2.getV().toString());
 
 		block0index = s;
 		$('#debug').html('block0index is now:'+block0index.toString());
