@@ -8,11 +8,13 @@ var hIndices = range(height);
 var blocks = []; // repr a width by height box
 var block0index = 0;
 
+var select1 = -1;
+
 
 for (var i = 0; i < width*height; i++) {
 	blocks.push(new block(i));
 	blocks[i].setLoc([parseInt(i/width),i%width]);
-	$('#button'+i.toString()).html(blocks[i].getV().toString());
+	$('#button'+i.toString()).html(blocks[i].getLabel().toString());
 }
 
 
@@ -27,11 +29,12 @@ function switchAdjBlocks(s){
 		b2.setV(tmpB1);
 
 		// switch labels on the buttons
-		$('#button'+s.toString()).html(b1.getV().toString());
-		$('#button'+block0index.toString()).html(b2.getV().toString());
+		$('#button'+s.toString()).html(b1.getLabel().toString());
+		$('#button'+block0index.toString()).html(b2.getLabel().toString());
 
 		block0index = s;
 		$('#debug').html('block0index is now:'+block0index.toString());
+		$('#instr').html('~~~');
 
 	} else { // aren't adjacent
 		$('#instr').html('please only switch adjacent blocks');
@@ -40,4 +43,13 @@ function switchAdjBlocks(s){
 	refreshSelect();
 }
 
+function select(item){
+	select1 = item;
+	$('#select1').html("block"+blocks[item].getV().toString());
+}
+
+function refreshSelect(){
+	$('#select1').html('block');
+	select1 = -1;
+}
 $('#debug').html('done loading blockscript.js');

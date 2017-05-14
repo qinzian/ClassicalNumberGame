@@ -1,5 +1,8 @@
 $('#debug').html('started loading script.js');
 
+var gaming = false;
+
+
 function b1(){ //clicked button
 	$('#debug').html(blocks[1].toString());
 	select(1);
@@ -42,21 +45,30 @@ function toggleDebugP(){
 	$('#debugInfo').children().toggle();
 }
 
+$('#switchButton').disabled = true;
+function startGaming(){
+	$('#switchButton').disabled = false;
+}
+
+
 function switchButton(){
 	$('#debug').html('clicked switch button');
 
-	$('#output').html(' ');
+	if (!gaming){ // switching if not gaming
+		return;
+	}
+
 	if (select1 == -1){
-		$('#output').html('please select a block');
+		$('#instr').html('please select a block');
 		$('#debug').html('select1 == -1');
 	} else {
 		switchAdjBlocks(select1);
-	}
-
-	if (checkWinCondition()){
-		$('#instr').html('You did it!! Let\'s play again!');
-		stopTiming(); // TODO
-		updateBestTime();
+		if (checkWinCondition()){
+			stopTiming();
+			updateBestTime();
+			gaming = false;
+			$('#debug').html('gaming = '+gaming.toString());
+		}
 	}
 
 	refreshSelect();

@@ -5,7 +5,7 @@ var possLoc = [];
 function randomize(){
   $('#debug').html('clicked random button');
   var adjIndex;
-  for (var i = 0; i <          10       ; i++) {
+  for (var i = 0; i <          3       ; i++) {
     updateBlock0adj();
     adjIndex = Math.floor((Math.random()*block0adj.length)); // random block in block0adj[]
 
@@ -44,8 +44,9 @@ function updateBlock0adj(){
 }
 
 function randomizeInit(){
+  gaming = true;
   refreshSelect();
-  resetTime();  // TODO
-  startTiming(); // TODO
+  resetTime();
+  startTiming();
 }
 $('#debug').html('done loading generator.js');

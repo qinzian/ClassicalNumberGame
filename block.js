@@ -10,6 +10,9 @@ function block(n){
   this.getV = function(){
     return this.v;
   }
+  this.getLabel = function(){
+    return this.v;// == 0? '':this.v;
+  }
   this.setLoc = function(u){
     this.loc = u;
   }

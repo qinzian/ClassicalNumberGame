@@ -1,6 +1,6 @@
 function strf(str,args){
   for (var i = 0; i  < args.length; i++) {
-    str = str.replace('{}',args[i]);
+    str = str.replace('{}',args[i].toString());
   }
   return str;
 }
@@ -18,7 +18,7 @@ function range(p1,p2){
 }
 
 $(function() {//keeps track of where the mouse is
-    $('#guiZone').mousemove(function(e) {
+    $('body').mousemove(function(e) {
         $('#mousePos').html('x:'+event.offsetX+'<br>y:'+event.offsetY);
     });
 });
