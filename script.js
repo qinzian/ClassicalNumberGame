@@ -37,28 +37,29 @@ function b0(){ //clicked button
 	select(0);
 }
 
-$('#debug').hide();
-$('#mousePos').hide();
+$('#debugInfo').children().hide()
 function toggleDebugP(){
-	$('#debug').toggle();
-	$('#mousePos').toggle();
+	$('#debugInfo').children().toggle();
 }
 
 function switchButton(){
 	$('#debug').html('clicked switch button');
 
 	$('#output').html(' ');
-	if (select1 == -1 || select2 == -1){
-		$('#output').html('invalid switch, please select two blocks');
-		refreshSelect();
+	if (select1 == -1){
+		$('#output').html('please select a block');
+		$('#debug').html('select1 == -1');
 	} else {
-		switchAdjBlocks(select1,select2);
+		switchAdjBlocks(select1);
 	}
-	if (gaming && checkWinCondition()){
+
+	if (checkWinCondition()){
 		$('#instr').html('You did it!! Let\'s play again!');
-		updateBestMove(moves);
-		gaming = false;
+		stopTiming(); // TODO
+		updateBestTime();
 	}
+
+	refreshSelect();
 }
 
 function checkWinCondition(){

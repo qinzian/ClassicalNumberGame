@@ -6,16 +6,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id = 'guiZone'>
-      <p id = 'bestMovesCounter' class = 'counter'>Best Move: ?</p>
+    <div id = 'outputZone' class = 'zone'>
+      <p id = 'instr'>After pressing "Randomize", your goal is to put everything back <br> to the original order by switching with block #0'</p>
+      <button onclick = 'randomize()'>Randomize</button>
+      <p id = 'bestTime' class = 'counter'>Best Time: ?</p>
+      <p id = 'timeCounter' class = 'counter'>Total time: 0</p>
+    </div>
 
-      <div id = 'miscZone'>
-        <p id = 'instr'>Press "Randomize" to begin</p>
-        <button onclick = 'randomize()'>Randomize</button>
-        <p id = 'movesCounter' class = 'counter'>Total Moves: 0</p>
-      </div>
+    <div id = 'inputZone' class = 'zone'>
 
-      <div id = 'gameZone'>
+      <div id = 'gameZone' class = 'zone'>
         <br>
         <button onclick = 'b0()' id='button0' class = 'gameButtons'></button>
         <button onclick = 'b1()' id='button1' class = 'gameButtons'></button>
@@ -35,18 +35,15 @@
         <button onclick = 'b8()' id='button8' class = 'gameButtons'></button>
       </div>
 
-      <div id = 'selectionZone'>
-        <br>
-        1.selected:<p id = 'select1'>block</p>
-        <br>
-        2.selected:<p id = 'select2'>block</p>
-        <br>
-      </div>
-
-      <div id = 'debugZone'>
+      <div id = 'debugZone' class = 'zone'>
         <button onclick = 'toggleDebugP()'>Debug On/Off</button>
-        <p id ='debug' class = 'info'>debug info</p>
-        <p id ='mousePos' class = 'info'>( , )</p>
+
+        <div id = 'debugInfo'>
+          <p id ='debug' class = 'info'>debug info</p>
+          <p id ='mousePos' class = 'info'>( , )</p>
+          <p id = 'select1' class = 'info'>block</p>
+        </div>
+
       </div>
     </div>
 
@@ -55,7 +52,7 @@
     <script src='helper.js'> </script>
     <script src='block.js'> </script>
     <script src='selector.js'> </script>
-    <script src= 'moves.js'></script>
+    <script src= 'timeCounter.js'></script>
     <script src='blockscript.js'></script>
     <script src='script.js'></script>
     <script src='generator.js'></script>

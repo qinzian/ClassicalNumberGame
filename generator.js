@@ -9,7 +9,7 @@ function randomize(){
     updateBlock0adj();
     adjIndex = Math.floor((Math.random()*block0adj.length)); // random block in block0adj[]
 
-    switchAdjBlocks(block0index,block0adj[adjIndex]);
+    switchAdjBlocks(block0adj[adjIndex]);
   }
 
   randomizeInit();
@@ -44,10 +44,8 @@ function updateBlock0adj(){
 }
 
 function randomizeInit(){
-  gaming = true;
   refreshSelect();
-  select(block0index);
-  $('#instr').html('put everything back to the original order by switching with block#0');
-  resetMoves();
+  resetTime();  // TODO
+  startTiming(); // TODO
 }
 $('#debug').html('done loading generator.js');

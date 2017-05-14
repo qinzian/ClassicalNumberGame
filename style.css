@@ -14,13 +14,19 @@ body {background: lightblue;padding:10px;}
   color: lightyellow;
 }
 
-#guiZone{
-  position : relative;
-  left : -70px;
-  top: -80px;
+.zone{  border: 2px solid;  padding: 5px;}
 
+#inputZone{
+  position : absolute;
   height: 550px;
   width: 850px;
+}
+
+#outputZone{
+  position: absolute;
+  left:650px;
+  top: 20px;
+  width: 350px;
 }
 
 #switchButton{
@@ -32,7 +38,7 @@ body {background: lightblue;padding:10px;}
   font-size: 30px;
 }
 
-#bestMovesCounter{
+#bestTimeCounter{
   position: relative;
 
   left: 100px;
@@ -46,37 +52,11 @@ body {background: lightblue;padding:10px;}
   background-color: yellow;
 }
 
-#miscZone{
-  position: relative;
-  left:650px;
-  top: 20px;
-  width: 350px;
-
-
-  border: 2px solid;
-  padding: 5px;
-}
-
 #gameZone{
   position: relative;
   left:300px;
   top: -80px;
   width: 500px;
-
-  border: 2px solid;
-  padding: 5px;
-}
-
-#selectionZone{
-  font-size: 20px;
-
-  position: relative;
-  top: -370px;
-  left: 100px;
-  width: 180px;
-
-  border: 2px solid;
-  padding: 5px;
 }
 
 #debugZone{
@@ -85,7 +65,4 @@ body {background: lightblue;padding:10px;}
   left: 100px;
 
   width: 300px;
-
-  border: 2px solid;
-  padding: 5px;
 }

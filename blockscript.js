@@ -16,36 +16,29 @@ for (var i = 0; i < width*height; i++) {
 }
 
 
-function switchAdjBlocks(s1,s2){
-	var b1 = blocks[s1];
-	var b2 = blocks[s2];
-	var tmpB1 = [blocks[s1].getV()];
+function switchAdjBlocks(s){
+	var b1 = blocks[s];
+	var b2 = blocks[block0index];
+	var tmpB1 = blocks[s].getV();
 
 	if (b1.adjTo(b2)){ // are adjacent
 		// switch their value, v
 		b1.setV(b2.getV());
-		b2.setV(tmpB1[0]);
+		b2.setV(tmpB1);
 
 		// switch labels on the buttons
-		$('#button'+s1.toString()).html(blocks[s1].getV().toString());
-		$('#button'+s2.toString()).html(blocks[s2].getV().toString());
+		$('#button'+s.toString()).html(b1.getV().toString());
+		$('#button'+block0index.toString()).html(b2.getV().toString());
 
-		if (b1.getV() == 0){
-			block0index = s1;
-		} else if (b2.getV() == 0){
-			block0index = s2;
-		}
-		$('#debug').html('block0index: '+block0index.toString());
+		block0index = s;
+		$('#debug').html('block0index is now:'+block0index.toString());
+		$('#instr').html('~~~');
+
 	} else { // aren't adjacent
 		$('#instr').html('please only switch adjacent blocks');
 		$('#debug').html(strf('invalid switch b/w BUTTONS {}&{}; they\'re not adj',[s1,s2]));
 	}
 	refreshSelect();
-
-	if (gaming){
-		updateMoves();
-		select(block0index);
-	}
 }
 
 $('#debug').html('done loading blockscript.js');
