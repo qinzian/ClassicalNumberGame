@@ -1,6 +1,7 @@
 /*id takes priority when conflicting changes occur*/
 
 body {background: lightblue;padding:10px;}
+
 .info{
   background: pink;
   width: 220px;
@@ -14,20 +15,51 @@ body {background: lightblue;padding:10px;}
   color: lightyellow;
 }
 
-.zone{border: 2px solid;  padding: 5px;}
-
-#inputZone{
-  position : absolute;
-  height: 400px;
-  width: 380px;
-}
+.zone{border: 2px solid;  padding: 5px;} /**/
 
 #outputZone{
   position: absolute;
-  left:420px;
-  top: 20px;
+  left:400px;
+  top: 10px;
 
   width: 350px;
+}
+
+#instr{
+  position: relative;
+  left: 10px;
+  top: -485px;
+
+  font-size: 30px;
+}
+#instrImg{
+  position: relative;
+  left:150px;
+  top: -80px;
+
+  width: 200px;
+  height: 200px;
+  z-index: -2;
+}
+#speechLine{
+  position: relative;
+  left: 0px;
+  top: 70px;
+
+  width: 150px;
+  height: 220px;
+  z-index: -1;
+}
+
+#randomizeButton{
+  position: relative;
+  top: 15px;
+  left: 100px;
+
+  width: 150px;
+  height: 40px;
+
+  font-size: 25px;
 }
 
 .counter{
@@ -35,6 +67,14 @@ body {background: lightblue;padding:10px;}
   height: 40px;
   font-size: 30px;
   background-color: yellow;
+}
+
+#inputZone{
+  position : absolute;
+  height: 400px;
+  width: 350px;
+
+  top:20px;
 }
 
 #gameZone{

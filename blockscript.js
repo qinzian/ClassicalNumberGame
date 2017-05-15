@@ -21,7 +21,7 @@ for (var i = 0; i < width*height; i++) {
 
 function switchAdjBlocks(s){
 	if (!gaming && !generating){
-		$('#instr').html('How about you press "Randomize" first');
+		$('#instr').html('<br>How about you press "Randomize" first');
 		return;
 	}
 
@@ -39,14 +39,14 @@ function switchAdjBlocks(s){
 
 		block0index = s;
 		$('#debug').html('block0 at index:'+block0index.toString());
-		$('#instr').html('~~~');
+		$('#instr').html('<br><br>~~~');
 
 		if (gaming){
 			checkWinCondition();
 		}
 
 	} else { // aren't adjacent
-		$('#instr').html('please only switch adjacent blocks');
+		$('#instr').html('<br>wat u doin, adjacent blocks only, l2p gosh');
 		$('#debug').html(strf('invalid switch b/w BUTTONS {}&{}; they\'re not adj',[block0index,s]));
 	}
 }

@@ -9,12 +9,14 @@
     <div id = 'outputZone' class = 'zone'>
       <p id = 'bestTimeCounter' class = 'counter'>Best time||   ?</p>
       <p id = 'timeCounter' class = 'counter'>Total time||   ?</p>
-      <button onclick = 'randomize()'>Randomize</button>
-      <p id = 'instr'>After pressing "Randomize", your goal is to put everything back <br> to the original order by switching with block #0'</p>
+
+      <img id = 'speechLine' src = 'instrPics/speechLine.png' alt = "speechLine"> </img>
+      <img id = 'instrImg' src = 'instrPics/state1.png' alt = "instr img"> </img>
+      <p id = 'instr'>Solve the puzzle by putting everything back into their original order</p>
     </div>
 
     <div id = 'inputZone' class = 'zone'>
-
+      <button id = 'randomizeButton' onclick = 'randomize()'>Randomize</button>
       <div id = 'gameZone' class = 'zone'>
         <br>
 
@@ -46,14 +48,19 @@
       </div>
     </div>
 
-    <!--script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--This following script works with jquery to rotate an image by some degree no animation-->
+    <script src="https://raw.githubusercontent.com/wilq32/jqueryrotate/master/jQueryRotate.js"></script>
+
     <script src='helper.js'> </script>
-    <script src='script.js'></script>
-    <script src= 'timeCounter.js'></script>
+    
+    <script src='instr.js'></script>
+    <script src='timeCounter.js'></script>
 
     <script src='block.js'> </script>
     <script src='blockscript.js'></script>
     <script src='generator.js'></script>
+
+    <script src='script.js'></script>
   </body>
 </html>

@@ -9,4 +9,7 @@ function toggleDebugP(){
 }
 //toggleDebugP();
 
+
+var instrImg = new instrImg();
+instrImg.startAnimation();
 $('#debug').html('done loading script.js');

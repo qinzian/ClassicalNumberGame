@@ -14,22 +14,24 @@ function updateTime(){
 
 function updateBestTime(){
   $('#debug').html('in updateBestTime');
-  var msg = ['Let\'s play again!'];
+  var msg = ['<br>Let\'s play again!'];
 
-  var diff = sec+hsec/100 - bestTime;
+  var diff = sec+hsec/100 - bestTime; // time in seconds
   if (diff < 0){
     bestTime = sec+hsec/100;
     $('#bestTimeCounter').html(strf('Best time||   {}:{}',[sec,hsec]));
 
     msg.push('You set a new record!! ');
-  } else if (diff < 10){
-    msg.push('If only you were just a bit faster!! ');
-  } else if (diff < 2){
+  } else if (diff < 3){
     msg.push('SOOOOOO CLOOSE to a new record!! ');
-  } else {
+  } else if (diff < 8){
+    msg.push('If only you were bit faster!! ');
+  } else if (diff < 15){
     msg.push('You did it!');
+  } else {
+    msg.push('oh come on man, u can do better, I believe in you!')
   }
-  $('#instr').html(msg[1] + msg[0]);
+  $('#instr').html('<br>'+msg[1] + msg[0]);
 }
 
 function startTiming(){
