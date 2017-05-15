@@ -20,20 +20,19 @@ for (var i = 0; i < width*height; i++) {
 
 function switchAdjBlocks(s){
 	var b1 = blocks[s];
-	var b2 = blocks[block0index];
+	var b0 = blocks[block0index];
 
-	if (b1.adjTo(b2)){ // are adjacent
-		// switch their value, v
-		b2.setV(b1.getV());
-		b1.setV(0);
-
-		// switch labels on the buttons
+	if (b1.adjTo(b0)){ // are adjacent
+		// switch their value, v, and switch labels on the buttons
+		b0.setV(b1.getV());
 		$('#button'+block0index.toString()).attr('src',"numPics/num"+b1.getV().toString()+".png");
+
+		b1.setV(0);
 		$('#button'+s.toString()).attr('src',"numPics/num0.png");
 
 
 		block0index = s;
-		$('#debug').html('block0index is now:'+block0index.toString());
+		$('#debug').html('block0 at index:'+block0index.toString());
 		$('#instr').html('~~~');
 
 	} else { // aren't adjacent

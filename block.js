@@ -22,9 +22,6 @@ function block(n){
   this.setR = function(u){
     this.loc[0] = u;
   }
-  this.updateLabel = function(){
-    $('#button'+this.v.toString()).attr("src","numPics/num"+this.getV()+".png");
-  }
 
   this.toString = function(){
     return 'v = '+this.v+'    loc(' + this.loc.toString() + ')';
