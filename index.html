@@ -17,22 +17,21 @@
 
       <div id = 'gameZone' class = 'zone'>
         <br>
-        <img onclick = "b0()" id='button0' class = 'gameButtons' alt = 'img not loaded'></img>
-        <img onclick = 'b1()' id='button1' class = 'gameButtons' alt = 'img not loaded'></img>
-        <img onclick = 'b2()' id='button2' class = 'gameButtons' alt = 'img not loaded'></img>
+
+        <img onclick = "b0()" onmouseover = 'db0()' id='button0' class = 'gameButtons' alt = 'img not loaded'></img>
+        <img onclick = 'b1()' onmouseover = 'db1()' id='button1' class = 'gameButtons' alt = 'img not loaded'></img>
+        <img onclick = 'b2()' onmouseover = 'db2()' id='button2' class = 'gameButtons' alt = 'img not loaded'></img>
 
         <br>
 
-        <img onclick = 'b3()' id='button3' class = 'gameButtons' alt = 'img not loaded'></img>
-        <img onclick = 'b4()' id='button4' class = 'gameButtons' alt = 'img not loaded'></img>
-        <img onclick = 'b5()' id='button5' class = 'gameButtons' alt = 'img not loaded'></img>
-        <button onclick = 'switchButton()' id = 'switchButton'>switch</button>
-
+        <img onclick = 'b3()' onmouseover = 'db3()' id='button3' class = 'gameButtons' alt = 'img not loaded'></img>
+        <img onclick = 'b4()' onmouseover = 'db4()' id='button4' class = 'gameButtons' alt = 'img not loaded'></img>
+        <img onclick = 'b5()' onmouseover = 'db5()' id='button5' class = 'gameButtons' alt = 'img not loaded'></img>
         <br>
 
-        <img onclick = 'b6()' id='button6' class = 'gameButtons' alt = 'img not loaded'></img>
-        <img onclick = 'b7()' id='button7' class = 'gameButtons' alt = 'img not loaded'></img>
-        <img onclick = 'b8()' id='button8' class = 'gameButtons' alt = 'img not loaded'></img>
+        <img onclick = 'b6()' onmouseover = 'db6()' id='button6' class = 'gameButtons' alt = 'img not loaded'></img>
+        <img onclick = 'b7()' onmouseover = 'db7()' id='button7' class = 'gameButtons' alt = 'img not loaded'></img>
+        <img onclick = 'b8()' onmouseover = 'db8()' id='button8' class = 'gameButtons' alt = 'img not loaded'></img>
       </div>
 
       <div id = 'debugZone' class = 'zone'>
@@ -41,7 +40,7 @@
         <div id = 'debugInfo'>
           <p id ='debug' class = 'info'>debug info</p>
           <p id ='mousePos' class = 'info'>( , )</p>
-          <p id = 'select1' class = 'info'>block</p>
+          <p id = 'blockImgInfo' class = 'info'></p>
         </div>
 
       </div>
@@ -50,10 +49,11 @@
     <!--script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src='helper.js'> </script>
+    <script src='script.js'></script>
     <script src= 'timeCounter.js'></script>
+
     <script src='block.js'> </script>
     <script src='blockscript.js'></script>
-    <script src='script.js'></script>
     <script src='generator.js'></script>
   </body>
 </html>

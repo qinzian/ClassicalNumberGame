@@ -7,7 +7,7 @@ body {background: lightblue;padding:10px;}
 }
 
 .gameButtons{
-  
+
   width: 100px;
   height: 100px;
   font-size: 40px;
@@ -28,15 +28,6 @@ body {background: lightblue;padding:10px;}
   top: 20px;
 
   width: 350px;
-}
-
-#switchButton{
-  position : relative;
-  left: 30px;
-
-  width: 120px;
-  height: 40px;
-  font-size: 30px;
 }
 
 .counter{

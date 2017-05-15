@@ -1,86 +1,65 @@
 $('#debug').html('started loading script.js');
 
-var gaming = false;
+function b1(){
+	switchAdjBlocks(1);
+}
+function b2(){
+	switchAdjBlocks(2);
+}
+function b3(){
+	switchAdjBlocks(3);
+}
+function b4(){
+	switchAdjBlocks(4);
+}
+function b5(){
+	switchAdjBlocks(5);
+}
+function b6(){
+	switchAdjBlocks(6);
+}
+function b7(){
+	switchAdjBlocks(7);
+}
+function b8(){
+	switchAdjBlocks(8);
+}
+function b0(){
+	$('#debug').html('clicked img0');
+	switchAdjBlocks(0);
+}
 
-
-function b1(){ //clicked button
-	$('#debug').html(blocks[1].toString());
-	select(1);
+function db0(){
+	$('#blockImgInfo').html(blocks[0]);
 }
-function b2(){ //clicked button
-	$('#debug').html(blocks[2].toString());
-	select(2);
+function db1(){
+	$('#blockImgInfo').html(blocks[1]);
 }
-function b3(){ //clicked button
-	$('#debug').html(blocks[3].toString());
-	select(3);
+function db2(){
+	$('#blockImgInfo').html(blocks[0]);
 }
-function b4(){ //clicked button
-	$('#debug').html(blocks[4].toString());
-	select(4);
+function db3(){
+	$('#blockImgInfo').html(blocks[0]);
 }
-function b5(){ //clicked button
-	$('#debug').html(blocks[5].toString());
-	select(5);
+function db4(){
+	$('#blockImgInfo').html(blocks[0]);
 }
-function b6(){ //clicked button
-	$('#debug').html(blocks[6].toString());
-	select(6);
+function db5(){
+	$('#blockImgInfo').html(blocks[0]);
 }
-function b7(){ //clicked button
-	$('#debug').html(blocks[7].toString());
-	select(7);
+function db6(){
+	$('#blockImgInfo').html(blocks[0]);
 }
-function b8(){ //clicked button
-	$('#debug').html(blocks[8].toString());
-	select(8);
+function db7(){
+	$('#blockImgInfo').html(blocks[0]);
 }
-function b0(){ //clicked button
-	$('#debug').html(blocks[0].toString());
-	select(0);
+function db8(){
+	$('#blockImgInfo').html(blocks[0]);
 }
 
 function toggleDebugP(){
 	$('#debugInfo').children().toggle();
 }
 //toggleDebugP();
-
-$('#switchButton').disabled = true;
-function startGaming(){
-	$('#switchButton').disabled = false;
-}
-
-
-function switchButton(){
-	$('#debug').html('clicked switch button');
-
-	if (!gaming){ // switching if not gaming
-		return;
-	}
-
-	if (select1 == -1){
-		$('#instr').html('please select a block');
-		$('#debug').html('select1 == -1');
-	} else {
-		switchAdjBlocks(select1);
-		if (checkWinCondition()){
-			stopTiming();
-			updateBestTime();
-			gaming = false;
-			$('#debug').html('gaming = '+gaming.toString());
-		}
-	}
-
-	refreshSelect();
-}
-
-function checkWinCondition(){
-	for (var i = 0; i < blocks.length; i++) {
-		if(blocks[i].getV() !== i){
-			return false;
-		}
-	}
-	return true;
-}
 
 $('#debug').html('done loading script.js');

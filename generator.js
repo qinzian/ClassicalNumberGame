@@ -3,17 +3,19 @@ var block0adj = [];
 var possLoc = [];
 
 function randomize(){
-  $('#debug').html('clicked random button');
+  $('#debug').html('clicked randomize button');
+  randomizeInit();
+
   var adjIndex;
-  for (var i = 0; i <          30       ; i++) {
+  for (var i = 0; i <          5       ; i++) {
     updateBlock0adj();
     adjIndex = Math.floor((Math.random()*block0adj.length)); // random block in block0adj[]
 
     switchAdjBlocks(block0adj[adjIndex]);
   }
 
-  randomizeInit();
-
+  generating = false;
+  gaming = true;
   $('#debug').html(block0.getLoc().toString());
 }
 
@@ -44,8 +46,7 @@ function updateBlock0adj(){
 }
 
 function randomizeInit(){
-  gaming = true;
-  refreshSelect();
+  generating = true;
   resetTime();
   startTiming();
 }

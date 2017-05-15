@@ -8,9 +8,10 @@ var hIndices = range(height);
 var blocks = []; // repr a width by height box
 var block0index = 0;
 
-var select1 = -1;
+var gaming = false;
+var generating = false;
 
-
+// load img for each block
 for (var i = 0; i < width*height; i++) {
 	blocks.push(new block(i));
 	blocks[i].setLoc([parseInt(i/width),i%width]);
@@ -19,6 +20,11 @@ for (var i = 0; i < width*height; i++) {
 
 
 function switchAdjBlocks(s){
+	if (!gaming && !generating){
+		$('#instr').html('How about you press "Randomize" first');
+		return;
+	}
+
 	var b1 = blocks[s];
 	var b0 = blocks[block0index];
 
@@ -35,20 +41,26 @@ function switchAdjBlocks(s){
 		$('#debug').html('block0 at index:'+block0index.toString());
 		$('#instr').html('~~~');
 
+		if (gaming){
+			checkWinCondition();
+		}
+
 	} else { // aren't adjacent
 		$('#instr').html('please only switch adjacent blocks');
-		$('#debug').html(strf('invalid switch b/w BUTTONS {}&{}; they\'re not adj',[s1,s2]));
+		$('#debug').html(strf('invalid switch b/w BUTTONS {}&{}; they\'re not adj',[block0index,s]));
 	}
-	refreshSelect();
 }
 
-function select(item){
-	select1 = item;
-	$('#select1').html("block"+blocks[item].getV().toString());
-}
-
-function refreshSelect(){
-	$('#select1').html('block');
-	select1 = -1;
+function checkWinCondition(){
+	for (var i = 0; i < blocks.length; i++) {
+		if(blocks[i].getV() !== i){
+			return;
+		}
+	}
+	// solved the puzzle!
+	stopTiming();
+	updateBestTime();
+	gaming = false;
+	$('#debug').html('gaming = '+gaming.toString());
 }
 $('#debug').html('done loading blockscript.js');
