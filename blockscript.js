@@ -14,23 +14,23 @@ var select1 = -1;
 for (var i = 0; i < width*height; i++) {
 	blocks.push(new block(i));
 	blocks[i].setLoc([parseInt(i/width),i%width]);
-	$('#button'+i.toString()).html(blocks[i].getV().toString());
+	$('#button'+i.toString()).attr('src',"numPics/num"+i+".png"); // $().src = path; doesn't work
 }
 
 
 function switchAdjBlocks(s){
 	var b1 = blocks[s];
 	var b2 = blocks[block0index];
-	var tmpB1 = blocks[s].getV();
 
 	if (b1.adjTo(b2)){ // are adjacent
 		// switch their value, v
-		b1.setV(b2.getV());
-		b2.setV(tmpB1);
+		b2.setV(b1.getV());
+		b1.setV(0);
 
 		// switch labels on the buttons
-		$('#button'+s.toString()).html(b1.getV().toString());
-		$('#button'+block0index.toString()).html(b2.getV().toString());
+		$('#button'+block0index.toString()).attr('src',"numPics/num"+b1.getV().toString()+".png");
+		$('#button'+s.toString()).attr('src',"numPics/num0.png");
+
 
 		block0index = s;
 		$('#debug').html('block0index is now:'+block0index.toString());

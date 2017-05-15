@@ -12,12 +12,6 @@ function updateTime(){
   $('#timeCounter').html(strf('Total time||   {}:{}',[sec,hsec]));
 }
 
-function resetTime(){
-  sec = 0;
-  hsec = 0;
-  $('#timeCounter').html(strf('Total time||   {}:{}',[sec,hsec]));
-}
-
 function updateBestTime(){
   $('#debug').html('in updateBestTime');
   var msg = ['Let\'s play again!'];
@@ -44,5 +38,12 @@ function startTiming(){
 
 function stopTiming(){
   //$('#debug').html('in stopTiming');
-  clearTimeout(timeUpdater);
+  clearInterval(timeUpdater);
+}
+
+function resetTime(){
+  stopTiming();
+  sec = 0;
+  hsec = 0;
+  $('#timeCounter').html(strf('Total time||   {}:{}',[sec,hsec]));
 }

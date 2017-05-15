@@ -40,10 +40,10 @@ function b0(){ //clicked button
 	select(0);
 }
 
-$('#debugInfo').children().hide()
 function toggleDebugP(){
 	$('#debugInfo').children().toggle();
 }
+//toggleDebugP();
 
 $('#switchButton').disabled = true;
 function startGaming(){

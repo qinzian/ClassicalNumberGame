@@ -2,7 +2,7 @@ $('#debug').html('started loading block.js');
 
 function block(n){
   this.loc = [-1,-1];
-  this.v = n==0?".":n.toString();
+  this.v = n;
 
   this.setV = function(n){
     this.v = n;
@@ -21,6 +21,9 @@ function block(n){
   }
   this.setR = function(u){
     this.loc[0] = u;
+  }
+  this.updateLabel = function(){
+    $('#button'+this.v.toString()).attr("src","numPics/num"+this.getV()+".png");
   }
 
   this.toString = function(){
