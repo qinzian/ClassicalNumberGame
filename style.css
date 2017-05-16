@@ -1,7 +1,8 @@
 /*id takes priority when conflicting changes occur*/
 
 body{background-color:lightblue;
-width: 770px; height: 520px; border: 2px solid;}
+width: 770px; height: 520px; border: 2px solid;
+z-index: -3}
 
 .info{
   background: pink;
@@ -9,17 +10,17 @@ width: 770px; height: 520px; border: 2px solid;}
 }
 
 .gameButtons{
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 140px;
   font-size: 40px;
   color: lightyellow;
 }
 
-/*.zone{border: 2px solid;  padding: 5px;} /**/
+.zone{border: 2px solid;  padding: 5px;} /**/
 
 #outputZone{
   position: absolute;
-  left:400px;
+  left:500px;
   top: 10px;
 
   width: 350px;
@@ -55,8 +56,8 @@ width: 770px; height: 520px; border: 2px solid;}
 
 #randomizeButton{
   position: relative;
-  top: 15px;
-  left: 100px;
+  top: 0px;
+  left: 150px;
 
   width: 150px;
   height: 40px;
@@ -74,17 +75,18 @@ width: 770px; height: 520px; border: 2px solid;}
 #inputZone{
   position : absolute;
   height: 400px;
-  width: 350px;
+  width: 500px;
 
   top:20px;
 }
 
 #gameZone{
   position: relative;
-  top: 15px;
-  left: 15px;
+  top: 5px;
+  left: 5px;
 
-  width: 325px;
+  width: 475px;
+  height: 475px;
 }
 
 #debugZone{
@@ -99,9 +101,4 @@ width: 770px; height: 520px; border: 2px solid;}
   position: relative;
   top: -30px;
   left: 150px;
-}
-#debugToggleButton{
-  position: relative;
-  top: 40px;
-  left:30px;
 }
