@@ -8,8 +8,6 @@ function toggleDebugP(){
 	$('#debugInfo').children().toggle();
 }
 //toggleDebugP();
+instructor.setState(0);
 
-
-var instrImg = new instrImg();
-instrImg.startAnimation();
 $('#debug').html('done loading script.js');

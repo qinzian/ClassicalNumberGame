@@ -1,48 +1,39 @@
 /*
-  state1 - state1: default, nothing wrong
-  state2 - invalid moves / error
-  state3 - completion
-  state4 - new record
+  state0 - intro
+  state1 - default, nothing wrong
+  state2 - invalid move: need to randomize
+  state3 - invalid move: adj blocks only
+  state4+  completion(s)
 */
 function instrImg(){
-  this.state = 1;
-  this.animation;
-  this.frameNum = 0;
+  this.state = 0;
+  this.instructions = ['Solve the puzzle by rearraging all of the pieces back to their original order',
+                    '<br><br>~~~',
+                    '<br>How about you press "Randomize" first',
+                    '<br>wat u doin, pick adj blocks only, l2p zomgosh so trash',
+                    'Wowie, a new record!',
+                    'You can definitely set a new record ',
+                    'You did it!',
+                    'You can do better <br>I believe in you!',
+                    'y u take so long'];
   //$('#instrImg')
   //$('#instr')
 
   this.setState = function(n){
     this.state = n;
-    updateImg();
+    this.updateStateImg();
+    this.updateInstruction();
   }
-
-  this.updateImg = function(){
-    $('#instrImg').attr('src',"instrPics/state"+this.state.toString()+".png");
-  }
-
-  this.startAnimation = function(){
-    this.animation = setInterval(nextFrame, 1000);
-  }
-
-  this.stopAnimation = function(){
-    clearInterval(animation);
-  }
-
-  this.nextFrame = function(){
-    $('#debug').html('animating');
-    if (frameNum == 0){
-      framNum = 1;
-      $('#instrImg').rotate(10);
-    } else if (frameNum == 1){
-      frameNum = -1;
-      $('#instrImg').rotate(-20);
+  this.updateInstruction = function(){
+    if (this.state < 4){
+      $('#instr').html(this.instructions[this.state]);
     } else {
-      $('#instrImg').rotate(10);
-
-      if (Math.random() < 0.15){
-        frameNum = 0;
-      }
+      $('#instr').html('<br>'+this.instructions[this.state] +'<br>Let\'s play again!');
     }
   }
-  
+
+  this.updateStateImg = function(){
+    $('#instrImg').attr('src',"instrPics/pic"+this.state+".png");
+  }
 }
+var instructor = new instrImg();
