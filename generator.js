@@ -7,7 +7,7 @@ function randomize(){
   randomizeInit();
 
   var adjIndex;
-  for (var i = 0; i <          1       ; i++) {
+  for (var i = 0; i <          100       ; i++) {
     updateBlock0adj();
     adjIndex = Math.floor((Math.random()*block0adj.length)); // random block in block0adj[]
 
@@ -47,6 +47,7 @@ function updateBlock0adj(){
 
 function randomizeInit(){
   generating = true;
+  gaming = false;
   resetTime();
   startTiming();
 }

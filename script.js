@@ -7,7 +7,8 @@ function mousedOver(n){
 function toggleDebugP(){
 	$('#debugInfo').children().toggle();
 }
-//toggleDebugP();
+toggleDebugP(); // hide debugZone on load
+
 instructor.setState(0);
 
 $('#debug').html('done loading script.js');

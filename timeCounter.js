@@ -1,6 +1,8 @@
 var sec = -1;
 var hsec = 0;
 var bestTime = 300.0;
+var avgTime  = 300.0;
+var totalTrials = 0;
 var timeUpdater;
 
 function updateTime(){
@@ -13,9 +15,14 @@ function updateTime(){
 }
 
 function updateBestTime(){
-  var diff = sec+hsec/100 - bestTime; // time in seconds
+  var newTime = sec+hsec/100;
+  totalTrials++;
+  avgTime  = (avgTime + newTime)/totalTrials;
+
+
+  var diff = newTime - bestTime; // time is in seconds
   if (diff < 0){
-    bestTime = sec+hsec/100;
+    bestTime = newTime;
     $('#bestTimeCounter').html(strf('Best time||   {}:{}',[sec,hsec]));
     instructor.setState(4);
 
@@ -25,8 +32,13 @@ function updateBestTime(){
     instructor.setState(6);
   } else if (diff < 15){  // bad
     instructor.setState(7);
-  } else {                // rly bad 
+  } else if (newTime - avgTime > 20){                // rly bad
     instructor.setState(8);
+  } else {
+    instructor.setState(7);
+  }
+  if (bestTime < 15) {  // rly good, too good
+    instructor.setState(9);
   }
 }
 

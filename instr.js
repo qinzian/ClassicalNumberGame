@@ -15,7 +15,8 @@ function instrImg(){
                     'You can definitely set a new record ',
                     'You did it!',
                     'You can do better <br>I believe in you!',
-                    'y u take so long'];
+                    'y u take so long',
+                    '<br>mother of god <br>how were you so fast.... '];
   //$('#instrImg')
   //$('#instr')
 
@@ -25,10 +26,10 @@ function instrImg(){
     this.updateInstruction();
   }
   this.updateInstruction = function(){
-    if (this.state < 4){
-      $('#instr').html(this.instructions[this.state]);
-    } else {
+    if (range(4,9).indexOf(this.state) !== -1){
       $('#instr').html('<br>'+this.instructions[this.state] +'<br>Let\'s play again!');
+    } else {
+      $('#instr').html(this.instructions[this.state]);
     }
   }
 
