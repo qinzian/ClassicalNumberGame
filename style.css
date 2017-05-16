@@ -1,6 +1,6 @@
 /*id takes priority when conflicting changes occur*/
 
-body{background-color:lightgrey;}
+body{background-color:lightgrey; }
 
 .info{
   background: pink;
