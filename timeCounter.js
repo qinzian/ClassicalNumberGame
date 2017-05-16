@@ -37,7 +37,7 @@ function updateBestTime(){
   } else {
     instructor.setState(7);
   }
-  if (bestTime < 15) {  // rly good, too good
+  if (newTime < 15) {  // rly good, too good
     instructor.setState(9);
   }
 }
