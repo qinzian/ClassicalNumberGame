@@ -47,7 +47,7 @@ function switchAdjBlocks(s){
 
 	} else { // aren't adjacent
 		instructor.setState(3);
-		$('#debug').html(strf('invalid switch b/w BUTTONS {}&{}; they\'re not adj',[block0index,s]));
+		$('#debug').html(strf('invalid switch b/w blocks{}&{}',[b1.getV(),b0.getV()]));
 	}
 }
 

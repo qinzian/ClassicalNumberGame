@@ -19,6 +19,6 @@ function range(p1,p2){
 
 $(function() {//keeps track of where the mouse is
     $('body').mousemove(function(e) {
-        $('#mousePos').html('x:'+event.offsetX+'<br>y:'+event.offsetY);
+        $('#mousePos').html(strf('({},{})',[event.offsetX,event.offsetY]));
     });
 });

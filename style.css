@@ -1,9 +1,6 @@
 /*id takes priority when conflicting changes occur*/
 
-body{background-color:lightblue; background-image: url('bg.png');
-  width: 770px; height: 570px;
-  padding:10px;
-}
+body{background-color:lightblue;}
 
 .info{
   background: pink;
@@ -11,7 +8,6 @@ body{background-color:lightblue; background-image: url('bg.png');
 }
 
 .gameButtons{
-
   width: 100px;
   height: 100px;
   font-size: 40px;
@@ -26,6 +22,7 @@ body{background-color:lightblue; background-image: url('bg.png');
   top: 10px;
 
   width: 350px;
+
 }
 
 #instr{
@@ -34,7 +31,6 @@ body{background-color:lightblue; background-image: url('bg.png');
   top: -485px;
 
   font-size: 30px;
-  color: white;
   font-weight: bold;
 }
 #instrImg{
@@ -96,4 +92,15 @@ body{background-color:lightblue; background-image: url('bg.png');
   left: 15px;
 
   width: 300px;
+}
+
+#debugInfo{
+  position: relative;
+  top: -30px;
+  left: 150px;
+}
+#debugToggleButton{
+  position: relative;
+  top: 40px;
+  left:30px;
 }

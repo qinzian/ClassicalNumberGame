@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Classical Number Game</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -37,8 +37,7 @@
       </div>
 
       <div id = 'debugZone' class = 'zone'>
-        <button onclick = 'toggleDebugP()'>Debug On/Off</button>
-
+        <button id = 'debugToggleButton' onclick = 'toggleDebugP()'>Debug On/Off</button>
         <div id = 'debugInfo'>
           <p id ='debug' class = 'info'>debug info</p>
           <p id ='mousePos' class = 'info'>( , )</p>
