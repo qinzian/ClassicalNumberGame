@@ -1,6 +1,7 @@
 /*id takes priority when conflicting changes occur*/
 
-body{background-color:lightblue;}
+body{background-color:lightblue;
+width: 770px; height: 520px; border: 2px solid;}
 
 .info{
   background: pink;
