@@ -14,7 +14,8 @@ body{background-color:lightgrey; }
   color: lightyellow;
 }
 
-/*.zone{border: 2px solid;  padding: 5px;} /**/
+
+.zone{border: 2px solid;  padding: 5px;} /**/
 
 #outputZone{
   position: absolute;
@@ -22,6 +23,7 @@ body{background-color:lightgrey; }
   top: 10px;
 
   width: 350px;
+  height: 520px;
 }
 
 #instr{
@@ -69,7 +71,7 @@ body{background-color:lightgrey; }
 
 #inputZone{
   position : absolute;
-  height: 400px;
+  height: 520px;
   width: 500px;
 
   top:20px;
@@ -81,7 +83,7 @@ body{background-color:lightgrey; }
   left: 5px;
 
   width: 475px;
-  height: 475px;
+  height: 455px;
 }
 
 #debugZone{
