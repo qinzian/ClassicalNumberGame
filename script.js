@@ -1,3 +1,4 @@
+/*
 $('#debug').html('started loading script.js');
 
 function mousedOver(n){
@@ -8,8 +9,8 @@ function toggleDebugP(){
 	$('#debugInfo').children().toggle();
 }
 $('#debugZone').toggle();
-//toggleDebugP(); // hide debugZone on load
+//toggleDebugP(); // hide debugZone on load/**/
 
 instructor.setState(0);
 
-$('#debug').html('done loading script.js');
+//$('#debug').html('done loading script.js');

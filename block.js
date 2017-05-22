@@ -1,4 +1,4 @@
-$('#debug').html('started loading block.js');
+//$('#debug').html('started loading block.js');
 
 function block(n){
   this.loc = [-1,-1];
@@ -32,4 +32,4 @@ function block(n){
     return d==1;
   }
 }
-$('#debug').html('done loading block.js');
+//$('#debug').html('done loading block.js');

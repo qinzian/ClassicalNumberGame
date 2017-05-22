@@ -1,9 +1,9 @@
-$('#debug').html('started loading generator.js');
+//$('#debug').html('started loading generator.js');
 var block0adj = [];
 var possLoc = [];
 
 function randomize(){
-  $('#debug').html('clicked randomize button');
+  //$('#debug').html('clicked randomize button');
   randomizeInit();
 
   var adjIndex;
@@ -16,11 +16,11 @@ function randomize(){
 
   generating = false;
   gaming = true;
-  $('#debug').html(block0.getLoc().toString());
+  //$('#debug').html(block0.getLoc().toString());
 }
 
 function updateBlock0adj(){
-  $('#debug').html('in updateBlock0adj');
+  //$('#debug').html('in updateBlock0adj');
   var block0 = blocks[block0index];
 
   block0adj = [];
@@ -51,4 +51,4 @@ function randomizeInit(){
   resetTime();
   startTiming();
 }
-$('#debug').html('done loading generator.js');
+//$('#debug').html('done loading generator.js');

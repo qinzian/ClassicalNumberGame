@@ -1,4 +1,4 @@
-$('#debug').html('started loading blockscript.js');
+//$('#debug').html('started loading blockscript.js');
 
 var width = 3;
 var wIndices = range(width);
@@ -38,7 +38,7 @@ function switchAdjBlocks(s){
 
 
 		block0index = s;
-		$('#debug').html('block0 at index:'+block0index.toString());
+		//$('#debug').html('block0 at index:'+block0index.toString());
 		instructor.setState(1);
 
 		if (gaming){
@@ -47,7 +47,7 @@ function switchAdjBlocks(s){
 
 	} else { // aren't adjacent
 		instructor.setState(3);
-		$('#debug').html(strf('invalid switch b/w blocks{}&{}',[b1.getV(),b0.getV()]));
+		//$('#debug').html(strf('invalid switch b/w blocks{}&{}',[b1.getV(),b0.getV()]));
 	}
 }
 
@@ -77,6 +77,6 @@ function checkWinCondition(){
 	stopTiming();
 	updateBestTime();
 	gaming = false;
-	$('#debug').html('gaming = '+gaming.toString());
+	//$('#debug').html('gaming = '+gaming.toString());
 }
-$('#debug').html('done loading blockscript.js');
+//$('#debug').html('done loading blockscript.js');

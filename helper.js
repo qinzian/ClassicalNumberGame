@@ -17,8 +17,9 @@ function range(p1,p2){
   return lst;
 }
 
+/*
 $(function() {//keeps track of where the mouse is
     $('body').mousemove(function(e) {
         $('#mousePos').html(strf('({},{})',[event.offsetX,event.offsetY]));
     });
-});
+});/**/
