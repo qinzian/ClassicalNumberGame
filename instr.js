@@ -7,7 +7,7 @@
 */
 function instrImg(){
   this.state = 0;
-  this.instructions = ['Solve the puzzle by rearraging all of the pieces back to their original order',
+  this.instructions = ['Solve the puzzle by putting the numbers in continuoursly ascending order',
                     '<br><br>~~~',
                     '<br>How about you press "Randomize" first',
                     '<br>wat u doin, pick adj blocks only, l2p zomgosh so trash',

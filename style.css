@@ -63,10 +63,8 @@ body{background-color:lightgrey; }
 }
 
 .counter{
-  width: 250px;
   height: 40px;
   font-size: 30px;
-  background-color: yellow;
 }
 
 #inputZone{

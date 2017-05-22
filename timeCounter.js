@@ -11,7 +11,7 @@ function updateTime(){
     sec += 1;
     hsec = 0;
   }
-  $('#timeCounter').html(strf('Total time||   {}:{}',[sec,hsec]));
+  $('#timeCounter').html(strf('Total time {}:{}',[sec,hsec]));
 }
 
 function updateBestTime(){
@@ -23,7 +23,7 @@ function updateBestTime(){
   var diff = newTime - bestTime; // time is in seconds
   if (diff < 0){
     bestTime = newTime;
-    $('#bestTimeCounter').html(strf('Best time||   {}:{}',[sec,hsec]));
+    $('#bestTimeCounter').html(strf('Best time {}:{}',[sec,hsec]));
     instructor.setState(4);
 
   } else if (diff < 3){   // close
@@ -55,5 +55,5 @@ function resetTime(){
   stopTiming();
   sec = 0;
   hsec = 0;
-  $('#timeCounter').html(strf('Total time||   {}:{}',[sec,hsec]));
+  $('#timeCounter').html(strf('Total time {}:{}',[sec,hsec]));
 }

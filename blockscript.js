@@ -52,10 +52,26 @@ function switchAdjBlocks(s){
 }
 
 function checkWinCondition(){
-	for (var i = 0; i < blocks.length; i++) {
-		if(blocks[i].getV() !== i){
-			return;
+	var solved = false;
+
+	if (blocks[0].getV() == 0){
+		for (var i = 1; i < blocks.length; i++) {
+			if(blocks[i].getV() !== i){
+				return;
+			}
 		}
+		solved = true;
+	} else if (blocks[8].getV() == 0){
+		for (var i = 0; i < blocks.length-1; i++) {
+			if(blocks[i].getV() !== i+1){
+				return;
+			}
+		}
+		solved = true;
+	}
+
+	if (!solved){
+		return;
 	}
 	// solved the puzzle!
 	stopTiming();
