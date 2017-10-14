@@ -16,7 +16,7 @@ function instrImg(){
                     'You did it!',
                     'You can do better <br>I believe in you!',
                     'y u take so long',
-                    '<br>mother of god <br>how were you so fast.... '];
+                    '<br>Woh, what the world?? <br>how were you so fast.... '];
   //$('#instrImg')
   //$('#instr')
 
