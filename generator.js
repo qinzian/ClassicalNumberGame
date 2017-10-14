@@ -1,13 +1,24 @@
 $('#debug').html('started loading generator.js');
 var block0adj = [];
 var possLoc = [];
+var randomIter = 100;
+
+function setRandomizeIteration(){
+	var newIterAmt = parseInt(prompt("Amt(Iterations) when randomizing",randomIter));
+	if (typeof newIterAmt == "number"){
+		if (newIterAmt > 0){
+			randomIter = newIterAmt;
+			alert("Randomize() will perform "+randomIter+" swaps");
+		}
+	}
+}
 
 function randomize(){
   $('#debug').html('clicked randomize button');
   randomizeInit();
 
   var adjIndex;
-  for (var i = 0; i <          100       ; i++) {
+  for (var i = 0; i <          randomIter      ; i++) {
     updateBlock0adj();
     adjIndex = Math.floor((Math.random()*block0adj.length)); // random block in block0adj[]
 

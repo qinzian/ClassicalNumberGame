@@ -1,4 +1,4 @@
-/*id takes priority when conflicting changes occur*/
+﻿/*id takes priority when conflicting changes occur*/
 
 body{background-color:lightgrey; }
 
@@ -61,6 +61,17 @@ body{background-color:lightgrey; }
 
   font-size: 25px;
 }
+#settingButton{
+  position: relative;
+  top: 0px;
+  left: 160px;
+
+  width: 150px;
+  height: 40px;
+
+  font-size: 25px;
+}
+
 
 .counter{
   height: 40px;
